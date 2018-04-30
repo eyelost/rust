@@ -199,6 +199,10 @@ use flags::Subcommand;
 use cache::{Interned, INTERNER};
 use toolstate::ToolState;
 
+const LLVM_TOOLS: &[&str] = &[
+    "llvm-nm", "llvm-objcopy", "llvm-objdump", "llvm-profdata", "llvm-size",
+];
+
 /// A structure representing a Rust compiler.
 ///
 /// Each compiler has a `stage` that it is associated with and a `host` that
